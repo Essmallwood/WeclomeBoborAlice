@@ -7,26 +7,29 @@ import java.util.Scanner;
         public static void main(String[] args) {
 
             Scanner greeting = new Scanner(System.in);
-                System.out.print(" Enter user name: ");
-                String userName = greeting.nextLine();
+            System.out.print(" Enter user name: ");
+            String userName = greeting.nextLine();
 
 
+                while (true) {
+                    if ("Alice".equalsIgnoreCase(userName)) {
 
-                if ("Alice".equalsIgnoreCase(userName)) {
+                        System.out.println(" Welcome Alice.");
+                        break;
 
-                    System.out.println(" Welcome Alice.");
+                    } else if ("Bob".equalsIgnoreCase(userName)) {
+                        System.out.println("Welcome Bob.");
+                        break;
 
-                }
+                    } else {
+                        System.out.println("Invalid Input. Try again. ");
+                        userName = greeting.nextLine();
 
-                  else if ("Bob".equalsIgnoreCase(userName)) {
-                     System.out.println ("Welcome Bob.");
-
-                }
-
-            else{
-                    System.out.println("Invalid Input. Try again. ");
+                    }
                 }
             }
         }
+
+
 
 
